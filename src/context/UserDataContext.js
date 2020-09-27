@@ -37,7 +37,6 @@ const ProviderFirebase = (props) => {
               setPasswordError(error.message)
               break;
           }
-
         });
     }
   

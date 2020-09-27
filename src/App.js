@@ -8,18 +8,20 @@ import Main from './components/MainContainer';
 
 function App() {
   const user  = useContext(UserDataContext);
-
+  
   return (
     <ProviderFirebase>
       <div className="App">
-        {user ? (
-           <Main />
-         
+        { user ? (
+          <Main />
         ) : (
           <Login />
         )} 
+        { }
       </div>
+    {console.log('soy', user)}
     </ProviderFirebase>
+    
   );
 }
 

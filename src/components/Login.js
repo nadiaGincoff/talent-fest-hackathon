@@ -2,17 +2,9 @@ import React, { useContext } from 'react';
 import { UserDataContext } from '../context/UserDataContext'
 
 const Login = () => {
-    // const [ userData, saveUserData ] = useState({
-    //     userName: '',
-    //     userEmail: '',
-    //     userPassword: '',
-    //     emailError: '',
-    //     passwordError: '',
-    //     hasAccount: false
-    // })
 
     const {  
-        user,
+        // user,
         email,
         setEmail,
         emailError,
@@ -26,7 +18,7 @@ const Login = () => {
     } = useContext(UserDataContext);
     
     const handleClick = () => {
-        console.log(user)
+        console.log(hasAccount)
         handleLogin()
     }
     return (
