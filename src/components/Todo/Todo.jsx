@@ -86,11 +86,11 @@ function Todo() {
                     </ul>
                 </div>
                 <div className="formTareas">
-                    <h3>¿En qué planeas trabajar hoy</h3>
+                    <h3>Agregar actividades</h3>
                     <form onSubmit={agregar}>
                         <input 
                         type="text"
-                        placeholder="ingrese tarea a realizar"
+                        placeholder="ingrese actividad a realizar"
                         onChange={e => setTarea(e.target.value)}
                         value={tarea}
                         />

@@ -9,12 +9,7 @@
     "firebase": "^7.21.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-<<<<<<< HEAD
-    "react-hook-form": "^6.8.6",
-    "react-icons": "^3.11.0",
-=======
     "react-router-dom": "^5.2.0",
->>>>>>> 786b5619b40feb8b044fa5a96fdfddf8a52ba0bc
     "react-scripts": "3.4.3"
   },
   "scripts": {
