@@ -1,50 +1,42 @@
-import React, { Component } from 'react';
-import Toolbar from './components/Toolbar/Toolbar';
-import SideDrawer from './components/SideDrawer/SideDrawer';
-import Backdrop from './components/Backdrop/Backdrop';
-import { Footer } from './components/Footer';
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Router from './components/Router';
+import React, { Fragment } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Messages } from './components/views/Messages';
+import { Notifications } from './components/views/Notifications';
+import { User } from './components/views/User';
+import { Exit } from './components/views/Exit';
+import { Activities } from './components/views/Activities';
+import { Important } from './components/views/Important';
+import { Assigned } from './components/views/Assigned';
+import { Scheduled } from './components/views/Scheduled';
+import { Week } from './components/views/Week';
+import { Ranking } from './components/views/Ranking';
+import { Resting } from './components/views/Resting';
+import MainContainer from "./components/MainContainer";
 
+function App () {
+  return (
+    <Fragment>
+    <MainContainer></MainContainer>
+    <Router>
+      <Switch>
+        <Route path='/' exact component={MainContainer} />
+        <Route path='/Messages' component= {Messages} />
+        <Route path='/Notifications' component= {Notifications} />
+        <Route path="/User" component={User} />
+        <Route path="/Exit" component={Exit} />
+        <Route path='/Activities' component={Activities} />
+        <Route path='/Important' component={Important} />
+        <Route path='/Assigned' component={Assigned} />
+        <Route path='/Scheduled' component={Scheduled} />
+        <Route path='/Week' component={Week} />
+        <Route path='/Ranking' component={Ranking} />
+        <Route path='/Resting' component={Resting} />
+        <Route component={Error} />
+      </Switch>
+    </Router>
+    </Fragment>
 
-class App extends Component {
-  state = {
-    sideDrawerOpen:false
-      };
-
-  drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
-  return {sideDrawerOpen: !prevState.sideDrawOpen};
-});
-};
-
-backdropClickHandler = () => {
-  this.setState({sideDrawerOpen: false});
-};
-
-
-render() {
-
-let backdrop;
-
-if (this.state.sideDrawerOpen) {
-backdrop = <Backdrop click={this.backdropClickHandler} />
-}
-
-   return (
-      <div style={{height:'100%'}}>
-     <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-     <Router />
-     <SideDrawer show={this.state.sideDrawerOpen} />
-     {backdrop}
-     <main style={{marginTop:'64px'}}>
-     
-      </main>
-      <Footer />
-
-    </div>
   );
-}
-}
+};
 
 export default App;
