@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import './App.css';
 import ProviderFirebase from './context/UserDataContext';
 import { UserDataContext } from './context/UserDataContext'
-import Login from './components/Login';
+import Login from './components/Login/Login';
 import Main from './components/MainContainer';
 
 
@@ -17,11 +17,9 @@ function App() {
         ) : (
           <Login />
         )} 
-        { }
       </div>
-    {console.log('soy', user)}
+      {console.log('soy', user)}
     </ProviderFirebase>
-    
   );
 }
 

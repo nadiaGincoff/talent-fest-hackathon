@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import { UserDataContext } from '../context/UserDataContext'
+import { UserDataContext } from '../../context/UserDataContext'
+import './Login.css';
 
 const Login = () => {
 
@@ -21,24 +22,37 @@ const Login = () => {
         console.log(hasAccount)
         handleLogin()
     }
+
     return (
-        <section className='login'>
-            <div>
-                <label>Username</label>
+        <section className='containerLogin'>
+            <div className='containerLeft'>LOGO</div>
+            <div className='containerInputs'>
+                <h1>BIENVENIDO!</h1>
                 <input 
+                    className='input'
                     type='text'
                     autoFocus
                     required
+                    placeholder='Javier Madrid'
                     value={email} 
                     onChange={ (e) => setEmail(e.target.value) }
                 />
                 <p>{emailError}</p>
-                <label>Password</label>
+                <input 
+                    type='text'
+                    autoFocus
+                    required
+                    placeholder='javier.madrid@ey.com'
+                    value={email} 
+                    onChange={ (e) => setEmail(e.target.value) }
+                />
+                <p>{emailError}</p>        
                 <input 
                     type='password'
                     autoFocus
                     required
                     value={password}
+                    placeholder='********'
                     onChange={ (e) => setPassword(e.target.value) }
                 />
                 <p>{passwordError}</p>
