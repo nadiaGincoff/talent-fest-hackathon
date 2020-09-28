@@ -5,7 +5,7 @@ import './Login.css';
 const Login = () => {
 
     const {  
-        // user,
+        user,
         email,
         setEmail,
         emailError,
@@ -19,6 +19,7 @@ const Login = () => {
     } = useContext(UserDataContext);
     
     const handleClick = () => {
+        console.log(user)
         console.log(hasAccount)
         handleLogin()
     }
@@ -28,7 +29,7 @@ const Login = () => {
             <div className='containerLeft'>LOGO</div>
             <div className='containerInputs'>
                 <h1>BIENVENIDO!</h1>
-                <input 
+                {/* <input 
                     className='input'
                     type='text'
                     autoFocus
@@ -37,7 +38,7 @@ const Login = () => {
                     value={email} 
                     onChange={ (e) => setEmail(e.target.value) }
                 />
-                <p>{emailError}</p>
+                <p>{emailError}</p> */}
                 <input 
                     type='text'
                     autoFocus

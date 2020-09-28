@@ -1,16 +1,27 @@
-import React, { Fragment, useContext } from 'react';
-import { UserDataContext } from '../context/UserDataContext'
+import React, { useState } from 'react';
+import Toolbar from './Toolbar/Toolbar';
+import SideDrawer from './SideDrawer/SideDrawer';
+import Backdrop from './Backdrop/Backdrop';
+import { Footer } from './Footer';
 
-const Main = () => {
-    const { handleLogout } = useContext(UserDataContext);
-    return (    
-        <Fragment>
-            <h2>WELCOME BRO</h2>
-            <button onClick={handleLogout}>
-                Logout
-            </button>
-        </Fragment>
+const MainContainer = () => {
+    const [ sideDrawerOpen, setSideDrawerOpen ] = useState(false);
+
+    let backdrop;
+    if (sideDrawerOpen) {
+        backdrop = <Backdrop click={() => setSideDrawerOpen(false)} />
+    }
+
+    return ( 
+        <div style={{height:'100%'}}>
+            <Toolbar drawerClickHandler={() => setSideDrawerOpen(true)} />
+            <SideDrawer show={sideDrawerOpen} />
+            { backdrop }
+            <main style={{marginTop:'64px'}} />
+            <Footer />
+        </div>
     );
 }
  
-export default Main;
+export default MainContainer;
+

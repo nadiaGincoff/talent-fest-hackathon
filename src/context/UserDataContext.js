@@ -4,7 +4,13 @@ import fire from '../fire';
 export const UserDataContext = createContext();
 
 const ProviderFirebase = (props) => {
-    const [ user, setUser ] = useState('');
+    const indexUserData = {
+      email: null,
+      uid: null,
+      active: false
+    }
+
+    const [ user, setUser ] = useState(indexUserData);
     const [ email, setEmail ] = useState('');
     const [ password, setPassword ] = useState('');
     const [ emailError, setEmailError ] = useState('');
@@ -60,15 +66,50 @@ const ProviderFirebase = (props) => {
   
     const handleLogout = () => {
       fire.auth().signOut();
+      console.log(user)
     }
   
     const authListener = () => {
       fire.auth().onAuthStateChanged(user => {
         if (user) {
+
           clearInputs();
-          setUser(user);
+
+          user.getIdTokenResult()
+              .then(idTokenResult => {
+                console.log(idTokenResult)
+                if (!!idTokenResult.claims.admin) {
+                  console.log('es admin')
+                  setUser({
+                    email: user.email,
+                    uid: user.user_id,
+                    active: true,
+                    rol: 'admin'
+                  })
+                } else if (!!idTokenResult.claims.autor) {
+                  console.log('es autor')
+                  setUser({
+                    email: user.email,
+                    uid: user.user_id,
+                    active: true,
+                    rol: 'autor'
+                  }) 
+                } else {
+                  console.log('es invitado')
+                  setUser({
+                    email: user.email,
+                    uid: user.user_id,
+                    active: true,
+                    rol: 'invitado'
+                  }) 
+                }
+              })
         } else {
-          setUser('');
+          setUser({
+            email: null,
+            uid: null,
+            active: false
+          });
         }
       })
     }
@@ -92,7 +133,8 @@ const ProviderFirebase = (props) => {
               handleSignUp,
               handleLogout,
               setHasAccount,
-              hasAccount
+              hasAccount,
+              authListener
             }}
         >
             {props.children}

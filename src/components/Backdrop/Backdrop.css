@@ -1,0 +1,21 @@
+.backdrop {
+    position:fixed;
+    width:80%;
+    height:100%;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.3);
+    z-index:100;
+}
+
+.Selector a:hover,
+.Selector a:active {
+color:rgba(216, 160, 99, 0.939);
+}
+
+@media (min-width: 769px) {
+    .Selector {
+        display:flex;
+        flex-direction:column;
+}
+}
