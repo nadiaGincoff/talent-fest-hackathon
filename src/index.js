@@ -7,9 +7,9 @@ import ProviderFirebase from './context/UserDataContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProviderFirebase>
+    {/* <ProviderFirebase> */}
       <App />
-    </ProviderFirebase>
+    {/* </ProviderFirebase> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,12 +1,12 @@
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 import "./Toolbar.css";
-import React, { useContext } from "react";
-import { UserDataContext } from "../../context/UserDataContext";
-import {Link} from 'react-router-dom'
+import React from "react";
+// import { UserDataContext } from "../../context/UserDataContext";
+// import {Link} from 'react-router-dom'
 // import logo from '../Images/EY_Logo.png';
 
 const Toolbar = (props) => {
-    const { handleLogout } = useContext(UserDataContext);
+    // const { handleLogout } = useContext(UserDataContext);
 
     return(
         <header className="toolbar">
@@ -34,11 +34,11 @@ const Toolbar = (props) => {
                         <a href="/User">Usuario</a>
                       </li>
                       <li>
-                        <Link to='/Login'>
-                        <a href="/Login" onClick={handleLogout}>
+
+                        <a href="/Login">
                           Salir
                         </a>
-                        </Link>
+
                       </li>
                     </ul>
                 </div>
