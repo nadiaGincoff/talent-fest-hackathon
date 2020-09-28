@@ -9,9 +9,11 @@ body {
 }
 
 .footer {
+  width:100%;
   position:fixed;
   bottom:0;
   padding:10px;
+  text-align:Center;
   align-content:center;
 
 }

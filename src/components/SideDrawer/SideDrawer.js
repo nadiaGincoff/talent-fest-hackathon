@@ -1,7 +1,7 @@
 import React from "react";
 import "./SideDrawer.css";
 
-const sideDrawer = (props) => {
+const SideDrawer = (props) => {
   let drawerClasses = "side-drawer";
   if (props.show) {
     drawerClasses = "side-drawer, open";
@@ -11,8 +11,9 @@ const sideDrawer = (props) => {
     <div className="main-container">
       <nav className={drawerClasses}>
         <ul>
+           
           <li>
-            <a href="/">Actividades</a>
+            <a href="/Activities">Actividades</a>
           </li>
           <li>
             <a href="/Important">Importantes</a>
@@ -40,4 +41,4 @@ const sideDrawer = (props) => {
   );
 };
 
-export default sideDrawer;
+export default SideDrawer;

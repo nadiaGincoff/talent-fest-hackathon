@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // import Favicon from 'react-favicon';
+
+// import  Layout  from '../views/Layout';
+import  Login from '../views/Login';
 
 import { Messages } from '../views/Messages';
 import { Notifications } from '../views/Notifications';
@@ -16,20 +19,23 @@ import { Ranking } from '../views/Ranking';
 import { Resting } from '../views/Resting';
 // import { Error } from './components/Error';
 
+import BarsContainer from './BarsContainer';
 
-class router extends Component {
-  render() {
+const RouterApp = () => {
+ 
     return (
       <React.Fragment>
         {/* <Favicon url="favicon.ico"/> */}
-    
+    {/* <MainContainer /> */}
           <Router>
+          <BarsContainer />
             <Switch>
-          
+            <Route path="/Login" component={Login} />
+      <LAyout></LAyout>
                 <Route path='/Messages' component= {Messages} />
                 <Route path='/Notifications' component= {Notifications} />
-                <Route exact path="/User" component={User} />
-                <Route exact path="/Exit" component={Exit} />
+                <Route path="/User" component={User} />
+                <Route path="/Exit" component={Exit} />
 
                 <Route exact path='/' component={Activities} />
                 <Route path='/Important' component={Important} />
@@ -42,10 +48,9 @@ class router extends Component {
 
             </Switch>
           </Router>
-
+       
       </React.Fragment>
     );
   };
-};
 
-export default router;
+  export default RouterApp

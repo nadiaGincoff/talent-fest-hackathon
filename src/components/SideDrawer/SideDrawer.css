@@ -1,7 +1,7 @@
 .side-drawer {
     height:100%;
-    background:rgb(231, 231, 231);
-    background:rgba(0,0,0,0.1);
+    background:#2C2C3C;
+    /* background:rgba(0,0,0,0.1); */
     box-shadow:2px 0px 7px rgba(0,0,0,0.3);
     position:fixed;
     top:0;
@@ -45,7 +45,7 @@ list-style:none;
 }
 
 .side-drawer a {
-    color:rgb(39, 39, 39);
+    color:rgb(255, 255, 255);
     text-decoration:none;
     font-size:1.2rem;
     list-style:none;
