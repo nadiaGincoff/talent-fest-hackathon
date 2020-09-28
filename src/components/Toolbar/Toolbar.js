@@ -4,7 +4,7 @@ import './Toolbar.css';
 
 // import logo from '../Images/EY_Logo.png';
 
-const toolbar = props => (
+const Toolbar = props => (
     <header className='toolbar'>
         <nav className='toolbar__navigation'>
         <div className='toolbar__toggle-button'>
@@ -33,5 +33,5 @@ const toolbar = props => (
     </header>
 );
 
-export default toolbar;
+export default Toolbar;
 

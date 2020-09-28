@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // import Favicon from 'react-favicon';
 
-import  Layout  from '../views/Layout';
+// import  Layout  from '../views/Layout';
 import  Login from '../views/Login';
 
 import { Messages } from '../views/Messages';
@@ -18,7 +18,7 @@ import { Week } from '../views/Week';
 import { Ranking } from '../views/Ranking';
 import { Resting } from '../views/Resting';
 // import { Error } from './components/Error';
-// import  Layout from '../views/Layout';
+
 import BarsContainer from './BarsContainer';
 
 const RouterApp = () => {
@@ -28,10 +28,10 @@ const RouterApp = () => {
         {/* <Favicon url="favicon.ico"/> */}
     {/* <MainContainer /> */}
           <Router>
-          <BarsContainer />
+        
             <Switch>
             <Route path="/Login" component={Login} />
-      <Layout>
+    
                 <Route path='/Messages' component= {Messages} />
                 <Route path='/Notifications' component= {Notifications} />
                 <Route path="/User" component={User} />
@@ -45,7 +45,6 @@ const RouterApp = () => {
                 <Route path='/Ranking' component={Ranking} />
                 <Route path='/Resting' component={Resting} />
                 <Route component={Error} />
-                </Layout>
 
             </Switch>
           </Router>

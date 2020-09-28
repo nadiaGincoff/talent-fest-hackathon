@@ -1,18 +1,49 @@
-import React from 'react';
-// import PropTypes from 'prop-types';
-import RouterApp from './components/Router';
-// import { BarContent } from './components/BarContent';
-// import Footer from './components/footer';
+import React, { Fragment } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Messages } from './components/views/Messages';
+import { Notifications } from './components/views/Notifications';
+import { User } from './components/views/User';
+import { Exit } from './components/views/Exit';
+import { Activities } from './components/views/Activities';
+import { Important } from './components/views/Important';
+import { Assigned } from './components/views/Assigned';
+import { Scheduled } from './components/views/Scheduled';
+import { Week } from './components/views/Week';
+import { Ranking } from './components/views/Ranking';
+import { Resting } from './components/views/Resting';
+import MainContainer from "./components/MainContainer";
 
-function App() {
+import Login from "./components/views/Login";
 
-
+function App () {
   return (
-    <div className="App">
-    <RouterApp />
- 
-    </div>
+    <Fragment>
+   <MainContainer></MainContainer>
+    <Router>
+      <Switch>
+     
+        <Route path='/' exact component={MainContainer} />
+
+        <Route path='/' exact component={Login} />
+
+        <Route path='/Messages' component= {Messages} />
+        <Route path='/Notifications' component= {Notifications} />
+        <Route path="/User" component={User} />
+        <Route path="/Exit" component={Exit} />
+        <Route path='/Activities' component={Activities} />
+        <Route path='/Important' component={Important} />
+        <Route path='/Assigned' component={Assigned} />
+        <Route path='/Scheduled' component={Scheduled} />
+        <Route path='/Week' component={Week} />
+        <Route path='/Ranking' component={Ranking} />
+        <Route path='/Resting' component={Resting} />
+        {/* <Route component={Error} /> */}
+
+      </Switch>
+    </Router>
+    </Fragment>
+
   );
-}
+};
 
 export default App;

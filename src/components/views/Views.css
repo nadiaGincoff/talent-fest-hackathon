@@ -6,13 +6,13 @@
 }
 
 .content {
-    background-color:rgb(250, 250, 250);
+    background-color:#EFEEEE;
     width:100%;
     background-size:cover;
     color:rgb(184, 181, 181);
     text-align:center;
     margin-top: 3.4%;
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }  
 
 .container {
@@ -20,6 +20,17 @@
     height:100vh;
     background-color:rgb(53, 52, 52);
 }
+
+
+.login {
+    background: orangered;
+    margin-top:100px;
+}
+
+.form {
+    margin-top:100px;
+}
+
 
 
 @media (max-width:768px) {
