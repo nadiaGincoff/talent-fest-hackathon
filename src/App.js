@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Todo from './components/Todo';
+import Todo from './components/Todo/Todo';
 
 
 function App() {
@@ -10,5 +10,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
