@@ -1,0 +1,40 @@
+
+.containerLogin {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.containerInputs {
+    height: 100vh;
+    width: 50%;
+    border: 2vh solid yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerInputs h1 {
+    color: white;
+    font: Arial;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 45px;
+    line-height: 52.73px;
+    letter-spacing: 24.5%;
+    align-self: Right;
+}
+
+.containerInputs input {
+    width: 465px;
+    height: 69px;
+    border-radius: 20px;
+}
+
+::placeholder {
+    font-size: 25px;
+    font-weight: 300;
+    font-style: normal;
+    color: #BDBDBD;
+}
