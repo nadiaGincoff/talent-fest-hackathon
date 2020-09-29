@@ -8,62 +8,54 @@ body {
     /* text-align: center; */
 }
 
-.content {
-    /* background-color: rgb(250, 250, 250); */
+.content {  /* background-color: rgb(250, 250, 250); */
     width: 100%;
     background-size: cover;
-    /* color: rgb(184, 181, 181); */
     text-align: center;
     margin-top: 5%;
     margin-left: 21%;
 }
 
-
-
-
-
-    .login {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-    text-align: center;
+    .login { 
+        display:grid;
+        grid-template-columns:1fr 1fr;
         position: fixed;
-        height: 100%;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-    }
-
-    .welcome1 {
-        color: white;
-        text-align:center;
-        align-self:center;
-        }
-
-        .logologin1 {
-            align-self:center;
-            margin-bottom: 40px;
-        }
-    
-        .logologin2 {
-            display:none;
-            align-self:center;
-            margin-bottom: 40px;
-        }
-
-        .welcome2 {
-            color: white;
-        text-align:center;
             left: 0;
             top: 0;
             height: 100%;
             width: 100%;
-            box-shadow: inset 0px 0px 0px 14px rgba(247,225,4,1);
-        }
+            z-index: 1000000;
+            background: #2C2C3C;
+    }
 
-        .login-title {
-            padding-top:4%;
+.welcome1 { 
+   color:white;
+  align-self:center;
+}
 
-        }
+.logologin1 { 
+    display:flex;
+   flex-direction:column;
+   color:white;
+   text-align:center;
+   align-self:center;
+}
 
+.welcome2 { 
+   text-align:center;
+   box-shadow: inset 0px 0px 0px 14px rgba(247,225,4,1);
+}
+
+.logologin2 { 
+    display:none;
+}
+
+.logintittle {
+    color:white;
+    text-align:center;
+   align-self:flex-start;
+   padding-top:4%;
+}
 
 
 
@@ -75,6 +67,7 @@ body {
         margin-top: 15%;
         font-size: 1rem;
     }
+
     .content {
         width: 100%;
         background-size: cover;
@@ -82,32 +75,60 @@ body {
         margin-top: 3.4%;
         margin-left: 0;
     }
-    .login {
-        display: flex;
-        flex-direction:column;
-    }
-    .welcome1 {
-      display:none;
-        }
 
-        .logologin1 {
-            display:none;
-            align-self:center;
-            margin-bottom: 40px;
-        }
-        .welcome2 {
-            color: white;
-        text-align:center;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            box-shadow: inset 0px 0px 0px 14px rgba(247,225,4,1);
-        }
-        .logologin2 {
-            display:flex;
-            align-self:center;
-            margin-bottom: 40px;
-        }
+
+    .login { 
+        display:grid;
+        grid-template-columns:1fr;
+}
+
+.welcome1 { 
+    display:none;
+}
+.logologin1 { 
+    display:none;
+}
+
+.welcome2 { 
+    width:100%;
+   text-align:center;
+   box-shadow: inset 0px 0px 0px 14px rgba(247,225,4,1);
+
+}
+
+.logologin2 { 
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    color:white;
+    text-align:center;
+}
+
+.logintittle {
+    width:100%;
+    color:white;
+    text-align:center;
+   align-self:flex-start;
+   padding-top:4%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
