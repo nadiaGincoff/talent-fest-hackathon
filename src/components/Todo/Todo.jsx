@@ -7,6 +7,7 @@ function Todo() {
     const [tareas, setTareas] = useState([]);
     const [tarea, setTarea]= useState('')
 
+    const [isChecked, setIsChecked] = useState(false);
 
     React.useEffect(() =>{
         const obtenerDatos = async()=>{
@@ -68,8 +69,29 @@ function Todo() {
     return (
         <div>
             <div className="container">
-                <div>
-                    <h1>Completitud de objetivos</h1>
+                <h1>PRUEBA: Esta marcado: {isChecked ? "True" : "False"}</h1>
+                <div className="row">
+                    <ul className="list">
+                        {
+                            tareas.map(item => (
+                                <li className="listItem" key={item.id}>
+                                    {item.name}
+                                    <input 
+                                    type="checkbox"
+                                    checked={isChecked}
+                                    onChange={(e)=>{setIsChecked(e.target.checked)}}
+                                    />
+                                    <button 
+                                    className="btnEliminarTarea"
+                                    onClick={() => eliminar(item.id)}
+                                    >
+                                        Eliminar
+
+                                    </button>
+                                </li>
+                            ))
+                        }
+                    </ul>
                 </div>
                 
                 <div className="formTareas">
