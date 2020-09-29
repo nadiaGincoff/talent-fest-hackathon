@@ -4,13 +4,7 @@
 // export const UserDataContext = createContext();
 
 // const ProviderFirebase = (props) => {
-//     const indexUserData = {
-//       email: null,
-//       uid: null,
-//       active: false
-//     }
-
-//     const [ user, setUser ] = useState(indexUserData);
+//     const [ user, setUser ] = useState('');
 //     const [ email, setEmail ] = useState('');
 //     const [ password, setPassword ] = useState('');
 //     const [ emailError, setEmailError ] = useState('');
@@ -66,50 +60,15 @@
   
 //     const handleLogout = () => {
 //       fire.auth().signOut();
-//       console.log(user)
 //     }
   
 //     const authListener = () => {
 //       fire.auth().onAuthStateChanged(user => {
 //         if (user) {
-
 //           clearInputs();
-
-//           user.getIdTokenResult()
-//               .then(idTokenResult => {
-//                 console.log(idTokenResult)
-//                 if (!!idTokenResult.claims.admin) {
-//                   console.log('es admin')
-//                   setUser({
-//                     email: user.email,
-//                     uid: user.user_id,
-//                     active: true,
-//                     rol: 'admin'
-//                   })
-//                 } else if (!!idTokenResult.claims.autor) {
-//                   console.log('es autor')
-//                   setUser({
-//                     email: user.email,
-//                     uid: user.user_id,
-//                     active: true,
-//                     rol: 'autor'
-//                   }) 
-//                 } else {
-//                   console.log('es invitado')
-//                   setUser({
-//                     email: user.email,
-//                     uid: user.user_id,
-//                     active: true,
-//                     rol: 'invitado'
-//                   }) 
-//                 }
-//               })
+//           setUser(user);
 //         } else {
-//           setUser({
-//             email: null,
-//             uid: null,
-//             active: false
-//           });
+//           setUser('');
 //         }
 //       })
 //     }
@@ -133,8 +92,7 @@
 //               handleSignUp,
 //               handleLogout,
 //               setHasAccount,
-//               hasAccount,
-//               authListener
+//               hasAccount
 //             }}
 //         >
 //             {props.children}
