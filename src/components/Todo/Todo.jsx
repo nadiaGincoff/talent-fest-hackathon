@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import {firebase} from '../../firebase'
-
-
+import React, { useState } from 'react';
+import {firebase} from '../../firebase';
+import './Todo.css';
+import Plus from '../../Images/plus.png'
 function Todo() {
 
     const [tareas, setTareas] = useState([]);
@@ -65,6 +65,7 @@ function Todo() {
             console.log(error)
         }
     }
+
     return (
         <div>
             <div className="container">
@@ -92,12 +93,12 @@ function Todo() {
                         }
                     </ul>
                 </div>
+                
                 <div className="formTareas">
-                    <h3>Agregar actividades</h3>
-                    <form onSubmit={agregar}>
+                    <form onSubmit={agregar} className='form-container'>
                         <input 
                         type="text"
-                        placeholder="ingrese actividad a realizar"
+                        placeholder="Agregar actividades del Sprint "
                         onChange={e => setTarea(e.target.value)}
                         value={tarea}
                         />
@@ -105,10 +106,29 @@ function Todo() {
                         className="btnTarea"
                         type="submit"
                         >
-                            Agregar tarea
+                           <img src={Plus} alt="add plus" className="iconBtnTarea"/>
                         </button>
                     </form>
                 </div>
+                    <div className="row">
+                        <ul className="list">
+                            {
+                                tareas.map(item => (
+                                    <li className="listItem" key={item.id}>
+                                        {item.name}
+                                        <button 
+
+                                        className="btnEliminarTarea"
+                                        onClick={() => eliminar(item.id)}
+                                        >
+                                            Eliminar
+
+                                        </button>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                </div>     
             </div>
         </div>
     )
