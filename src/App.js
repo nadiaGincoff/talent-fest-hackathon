@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { Messages } from './components/views/Messages';
 import { Notifications } from './components/views/Notifications';
 import { User } from './components/views/User';
@@ -11,30 +11,18 @@ import { Scheduled } from './components/views/Scheduled';
 import { Week } from './components/views/Week';
 import { Ranking } from './components/views/Ranking';
 import { Resting } from './components/views/Resting';
-import MainContainer from "./components/MainContainer";
+import { Error } from './components/views/Error';
 
-function App () {
+import Layout from './components/Layout/Layout';
+import RoutesApp from "./Routes/RoutesApp";
+
+function App() {
   return (
-    <Fragment>
-      <MainContainer></MainContainer>
+    <>
       <Router>
-        <Switch>
-          <Route path='/' exact component={MainContainer} />
-          <Route path='/Messages' component= {Messages} />
-          <Route path='/Notifications' component= {Notifications} />
-          <Route path="/User" component={User} />
-          <Route path="/Exit" component={Exit} />
-          <Route path='/Activities' component={Activities} />
-          <Route path='/Important' component={Important} />
-          <Route path='/Assigned' component={Assigned} />
-          <Route path='/Scheduled' component={Scheduled} />
-          <Route path='/Week' component={Week} />
-          <Route path='/Ranking' component={Ranking} />
-          <Route path='/Resting' component={Resting} />
-          <Route component={Error} />
-        </Switch>
+        <RoutesApp />
       </Router>
-    </Fragment>
+    </>
   );
 };
 

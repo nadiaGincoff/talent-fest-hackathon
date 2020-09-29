@@ -9,6 +9,9 @@ body {
 }
 
 .footer {
+  color:rgb(185, 181, 181);
+  width:100%;
+  text-align:center;
   position:fixed;
   bottom:0;
   padding:10px;

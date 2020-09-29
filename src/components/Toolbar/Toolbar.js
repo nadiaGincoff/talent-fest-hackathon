@@ -5,7 +5,8 @@ import React from "react";
 // import {Link} from 'react-router-dom'
 // import logo from '../Images/EY_Logo.png';
 
-const toolbar = props => (
+
+const Toolbar = props => (
     <header className='toolbar'>
         <nav className='toolbar__navigation'>
         <div className='toolbar__toggle-button'>
@@ -23,7 +24,7 @@ const toolbar = props => (
 <div className='toolbar_navigation-items'>
  <ul>
 
- <li><a href='/Login'>Entrar</a></li>
+
     <li><a href='/Notifications'>Notificaciones</a></li>
     <li><a href='/Messages'>Mensajes</a></li>
     <li><a href='/User'>Usuario</a></li>
@@ -34,5 +35,5 @@ const toolbar = props => (
     </header>
 );
 
-export default toolbar;
+export default Toolbar;
 

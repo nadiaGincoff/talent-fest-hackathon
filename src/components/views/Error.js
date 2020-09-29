@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const Scheduled = () => (
+export const Error = () => (
 <div className='main-container'>
 <div className='content'>
-    <h1>Agendadas</h1>
+    <h1>Error</h1>
 </div>
 </div>
 );
