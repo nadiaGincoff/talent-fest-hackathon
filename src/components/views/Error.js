@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const Login = () => (
+export const Error = () => (
 <div className='main-container'>
 <div className='content'>
-    <h1>Login</h1>
+    <h1>Error</h1>
 </div>
 </div>
 );
