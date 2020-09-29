@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 // import Favicon from 'react-favicon';
 
-import Layout from '../components/Layout/Layout';
+import {Layout} from '../components/Layout/Layout';
 import LayoutLogin from '../components/Layout/LayoutLogin';
 import { Messages } from '../components/views/Messages';
 import { Notifications } from '../components/views/Notifications';

@@ -1,7 +1,7 @@
 import React from "react";
 import "./SideDrawer.css";
 
-const sideDrawer = (props) => {
+export const SideDrawer = (props) => {
   let drawerClasses = "side-drawer";
   if (props.show) {
     drawerClasses = "side-drawer, open";
@@ -40,4 +40,3 @@ const sideDrawer = (props) => {
   );
 };
 
-export default sideDrawer;

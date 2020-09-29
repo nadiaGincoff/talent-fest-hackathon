@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Toolbar from './Toolbar/Toolbar';
 import SideDrawer from './SideDrawer/SideDrawer';
 import Backdrop from './Backdrop/Backdrop';
-import Footer from './Footer';
+import { Footer } from './Footer';
 
 const MainContainer = () => {
     const [ sideDrawerOpen, setSideDrawerOpen ] = useState(false);
@@ -24,4 +24,3 @@ const MainContainer = () => {
 }
  
 export default MainContainer;
-
