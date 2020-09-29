@@ -1,13 +1,17 @@
+.icon {
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 3em;
+}
 .side-drawer {
-    height:100%;
-    background:#2C2C3C;
-    /* background:rgba(0,0,0,0.1); */
-    box-shadow:2px 0px 7px rgba(0,0,0,0.3);
-    position:fixed;
-    top:0;
-    left:0;
-    width:70%;
-    max-width:400px;
+    height: 100%;
+    background: #2C2C3C;
+    box-shadow: 2px 0px 7px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    max-width: 400px;
     /* z-index:200; */
     transform: translateX(-100%);
     transition: transform 0.3s ease-out;
@@ -15,56 +19,71 @@
 }
 
 .side-drawer.open {
-height:100%;
-list-style:none;
-display:flex;
-flex-direction:column;
-justify-content:center;
-transform: translateX(0);
-    }
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(0);
+}
 
 .side-drawer .open ul {
-transform: translateX(0);
-list-style:none;
+    transform: translateX(0);
+    list-style: none;
 }
 
 .side-drawer ul {
     height: 100%;
     list-style: none;
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr;
-    justify-content: center;
+    justify-content: center; */
+    margin-inline-start: -39px;
 }
 
 .side-drawer li {
-    margin:0.5rem 0;
-    list-style:none;
-    padding:15px;
-    text-align:center;
+
+    list-style: none;
+    padding: 15px;
+    text-align: center;
     border-bottom: 2px solid rgba(160, 154, 154, 0.604);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.side-drawer li:hover {
+    background-color: rgba(196, 196, 196, 0.35);
+    border-inline-start: 15px solid #F5E433;
 }
 
 .side-drawer a {
-    color:rgb(255, 255, 255);
-    text-decoration:none;
-    font-size:1.2rem;
-    list-style:none;
+    color: #F2F2F2;
+    text-decoration: none;
+    font-size: 25px;
+    list-style: none;
+    font-family: Arial;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: right;
 }
 
 .side-drawer a:hover,
 .side-drawer a:active {
-color:rgba(216, 160, 99, 0.939);
+    color: rgba(216, 160, 99, 0.939);
 }
 
 
 @media (min-width: 769px) {
     .side-drawer {
-        display:flex;
-        flex-direction:column;
-}
-.side-drawer,.open ul {
-    width:18%;
-    transform: translateX(0);
-    margin-top:58px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .side-drawer,
+    .open ul {
+        width: 18%;
+        transform: translateX(0);
+        margin-top: 100px;
     }
 }

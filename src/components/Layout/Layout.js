@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Toolbar } from '../Toolbar/Toolbar';
+import Toolbar from '../Toolbar/Toolbar';
 import { SideDrawer } from '../SideDrawer/SideDrawer';
 import { Backdrop } from '../Backdrop/Backdrop';
 import { Footer } from '../Footer/Footer';
