@@ -11,6 +11,7 @@ export const SideDrawer = (props) => {
     <div className="main-container">
       <nav className={drawerClasses}>
         <ul>
+           
           <li>
             <a href="/Activities">Actividades</a>
           </li>

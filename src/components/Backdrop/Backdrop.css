@@ -13,9 +13,9 @@
 color:rgba(216, 160, 99, 0.939);
 }
 
-@media (min-width: 769px) {
+/* @media (min-width: 769px) {
     .Selector {
         display:flex;
         flex-direction:column;
 }
-}
+} */

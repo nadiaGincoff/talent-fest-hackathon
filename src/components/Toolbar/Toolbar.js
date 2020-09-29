@@ -1,6 +1,6 @@
-import React from "react";
-import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
-import "./Toolbar.css";
+import React from 'react';
+import DrawerToggleButton from'../SideDrawer/DrawerToggleButton';
+import './Toolbar.css';
 
 // import logo from '../Images/EY_Logo.png';
 

@@ -1,31 +1,31 @@
 // import { renderIntoDocument } from 'react-dom/test-utils';
-import React from 'react';
+// import React from 'react';
 
 
-const Login = () => {
+// const Login = () => {
 
-    return (
-        <div className='login'>
+//     return (
+//         <div className='login'>
 
-        <section className='containerLogin'>
-                <div className='containerLeft'>LOGO</div>
-                  <div className='containerInputs'>
-                    <h1>BIENVENIDO!</h1>
-               <input 
-                      className='input'
-                      type='text'></input>
-                      </div>
-</section>
+//         <section className='containerLogin'>
+//                 <div className='containerLeft'>LOGO</div>
+//                   <div className='containerInputs'>
+//                     <h1>BIENVENIDO!</h1>
+//                <input 
+//                       className='input'
+//                       type='text'></input>
+//                       </div>
+// </section>
     
 
- </div>
+//  </div>
 
 
 
-    )
-}
+//     )
+// }
 
- export default Login;
+//  export default Login;
 
 
 
