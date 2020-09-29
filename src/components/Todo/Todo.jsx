@@ -64,10 +64,15 @@ function Todo() {
             console.log(error)
         }
     }
+
     return (
         <div>
             <div className="container">
-            <div className="formTareas">
+                <div>
+                    <h1>Completitud de objetivos</h1>
+                </div>
+                
+                <div className="formTareas">
                     <form onSubmit={agregar} className='form-container'>
                         <input 
                         type="text"
@@ -79,30 +84,29 @@ function Todo() {
                         className="btnTarea"
                         type="submit"
                         >
-                           <img src={Plus} alt="add plus" className="btnTarea"/>
+                           <img src={Plus} alt="add plus" className="iconBtnTarea"/>
                         </button>
                     </form>
                 </div>
-                <div className="row">
-                    <ul className="list">
-                        {
-                            tareas.map(item => (
-                                <li className="listItem" key={item.id}>
-                                    {item.name}
-                                    <button 
-                                   
-                                    className="btnEliminarTarea"
-                                    onClick={() => eliminar(item.id)}
-                                    >
-                                        Eliminar
+                    <div className="row">
+                        <ul className="list">
+                            {
+                                tareas.map(item => (
+                                    <li className="listItem" key={item.id}>
+                                        {item.name}
+                                        <button 
 
-                                    </button>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
-                
+                                        className="btnEliminarTarea"
+                                        onClick={() => eliminar(item.id)}
+                                        >
+                                            Eliminar
+
+                                        </button>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                </div>     
             </div>
         </div>
     )

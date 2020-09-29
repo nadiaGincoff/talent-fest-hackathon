@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 
 
 export const Week = () => {
-    const [radio, setRadio] = useState('')
+    // const [radio, setRadio] = useState('')
 return(
     <div className='main-container'>
 <div className='content'>

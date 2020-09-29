@@ -8,11 +8,11 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    margin-top: 5em;
 }
 
 .formTareas input {
     border: none;
-    /* padding: 2em; */
     width: 70%;
     font-family: Roboto;
     font-style: normal;

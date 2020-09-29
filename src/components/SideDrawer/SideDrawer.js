@@ -8,7 +8,7 @@ import Activities from '../../Images/side-drawer-logos/sol.png'
 import Important from '../../Images/side-drawer-logos/star.png'
 import Break from '../../Images/side-drawer-logos/break.png'
 
-const sideDrawer = (props) => {
+export const SideDrawer = (props) => {
   let drawerClasses = "side-drawer";
   if (props.show) {
     drawerClasses = "side-drawer, open";
@@ -18,6 +18,7 @@ const sideDrawer = (props) => {
     <div className="main-container">
       <nav className={drawerClasses}>
         <ul>
+           
           <li>
             <img src={Activities} alt="side drawer img" className='icon' />
             <a href="/Activities">Actividades</a>
@@ -54,4 +55,3 @@ const sideDrawer = (props) => {
   );
 };
 
-export default sideDrawer;
