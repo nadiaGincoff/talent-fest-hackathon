@@ -1,11 +1,15 @@
+.logo {
+    width: 60px;
+    height: 72px;
+}
 .toolbar {
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    background-color:rgb(233, 233, 233);
-    height:56px;
-    border-bottom: 2px solid rgba(31, 30, 30, 0.604);
+    background-color:FFFFFF;
+    height: 100px;
+    box-shadow: inset 0 -10px 0 #2C2C3C;
 }
 
 .toolbar__navigation {
@@ -17,7 +21,7 @@
 
 .toolbar__logo {
     margin-left:1rem;
-    }
+}
 
 .toolbar__logo a {
 color:rgb(34, 33, 33);

@@ -4,7 +4,7 @@ import React from "react";
 // import { UserDataContext } from "../../context/UserDataContext";
 // import {Link} from 'react-router-dom'
 // import logo from '../Images/EY_Logo.png';
-
+import logoEy from '../../Images/EY_Logo.png'
 const Toolbar = (props) => {
     // const { handleLogout } = useContext(UserDataContext);
 
@@ -16,7 +16,7 @@ const Toolbar = (props) => {
                 </div>
 
                 <div className="toolbar__logo">
-                    <a href="/">EY</a>
+                    <a href="/"><img src={logoEy} className='logo' alt='logo-ey' /></a>
                 </div>
 
             {/* <a href='/'><img src={logo} alt="Logo EY" width='100px'/></a> */}

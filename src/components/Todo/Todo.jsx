@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import {firebase} from '../../firebase'
-
+import React, { useState } from 'react';
+import {firebase} from '../../firebase';
+import './Todo.css';
+import Plus from '../../Images/plus.png'
 function Todo() {
 
     const [tareas, setTareas] = useState([]);
@@ -66,6 +67,22 @@ function Todo() {
     return (
         <div>
             <div className="container">
+            <div className="formTareas">
+                    <form onSubmit={agregar} className='form-container'>
+                        <input 
+                        type="text"
+                        placeholder="Agregar actividades del Sprint "
+                        onChange={e => setTarea(e.target.value)}
+                        value={tarea}
+                        />
+                        <button 
+                        className="btnTarea"
+                        type="submit"
+                        >
+                           <img src={Plus} alt="add plus" className="btnTarea"/>
+                        </button>
+                    </form>
+                </div>
                 <div className="row">
                     <ul className="list">
                         {
@@ -73,6 +90,7 @@ function Todo() {
                                 <li className="listItem" key={item.id}>
                                     {item.name}
                                     <button 
+                                   
                                     className="btnEliminarTarea"
                                     onClick={() => eliminar(item.id)}
                                     >
@@ -84,23 +102,7 @@ function Todo() {
                         }
                     </ul>
                 </div>
-                <div className="formTareas">
-                    <h3>Agregar actividades</h3>
-                    <form onSubmit={agregar}>
-                        <input 
-                        type="text"
-                        placeholder="ingrese actividad a realizar"
-                        onChange={e => setTarea(e.target.value)}
-                        value={tarea}
-                        />
-                        <button 
-                        className="btnTarea"
-                        type="submit"
-                        >
-                            Agregar tarea
-                        </button>
-                    </form>
-                </div>
+                
             </div>
         </div>
     )
