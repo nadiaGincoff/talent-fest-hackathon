@@ -1,0 +1,40 @@
+[33mc1ce8c6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m HEAD@{0}: commit: Estilo base login responsive y comentar codigo demás
+[33m66d24b6[m HEAD@{1}: pull upstream master: Merge made by the 'recursive' strategy.
+[33mea747b2[m HEAD@{2}: commit: Merging
+[33md37e91b[m HEAD@{3}: pull upstream master: Fast-forward
+[33m3c66af8[m HEAD@{4}: commit (merge): merge
+[33m60f15a8[m HEAD@{5}: pull: Merge made by the 'recursive' strategy.
+[33m03b0e75[m[33m ([m[1;32mdevelop[m[33m)[m HEAD@{6}: rebase (finish): returning to refs/heads/master
+[33m03b0e75[m[33m ([m[1;32mdevelop[m[33m)[m HEAD@{7}: rebase (pick): trayendo cambios firebase
+[33me4731d2[m[33m ([m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{8}: rebase (skip): updating HEAD
+[33me4731d2[m[33m ([m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{9}: checkout: moving from login to develop
+[33m192ff8a[m[33m ([m[1;31morigin/login[m[33m, [m[1;32mlogin[m[33m)[m HEAD@{10}: checkout: moving from develop to login
+[33me4731d2[m[33m ([m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{11}: pull: Fast-forward
+[33m1aaaaa5[m HEAD@{12}: checkout: moving from login to develop
+[33m192ff8a[m[33m ([m[1;31morigin/login[m[33m, [m[1;32mlogin[m[33m)[m HEAD@{13}: checkout: moving from 192ff8abcb6ccdc666377ab4200b227b88236094 to login
+[33m192ff8a[m[33m ([m[1;31morigin/login[m[33m, [m[1;32mlogin[m[33m)[m HEAD@{14}: commit: Ruta Login
+[33m97ab759[m HEAD@{15}: commit: Ruta Login
+[33m577dc20[m HEAD@{16}: commit: Vista Login
+[33mec7176b[m HEAD@{17}: commit: merging master develop
+[33m4bb7775[m HEAD@{18}: rebase (start): checkout 4bb7775eb67e63c81f14e8a19c30738e3d253571
+[33mfffe4b5[m HEAD@{19}: checkout: moving from develop to master
+[33m1aaaaa5[m HEAD@{20}: rebase (abort): updating HEAD
+[33mfffe4b5[m HEAD@{21}: commit: trayendo cambios firebase
+[33m7d26a8e[m HEAD@{22}: checkout: moving from master to master
+[33m7d26a8e[m HEAD@{23}: commit (merge): detalles
+[33m8e6851b[m HEAD@{24}: checkout: moving from develop to master
+[33me4731d2[m[33m ([m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{25}: checkout: moving from master to develop
+[33m8e6851b[m HEAD@{26}: checkout: moving from develop to master
+[33me4731d2[m[33m ([m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{27}: commit: Intento Ruta Login
+[33m1aaaaa5[m HEAD@{28}: checkout: moving from ae090bc032cb5eaae5870663fe0a6a3d81d05017 to develop
+[33mae090bc[m HEAD@{29}: commit: merging
+[33mba251a4[m HEAD@{30}: rebase (start): checkout ba251a46c1f96f7843ba22dfb7087087c207d573
+[33m1aaaaa5[m HEAD@{31}: commit: class a function
+[33m8a3b7e1[m HEAD@{32}: checkout: moving from master to develop
+[33m8e6851b[m HEAD@{33}: commit: Arreglando rutas
+[33m8a3b7e1[m HEAD@{34}: checkout: moving from develop to master
+[33m8a3b7e1[m HEAD@{35}: checkout: moving from master to develop
+[33m8a3b7e1[m HEAD@{36}: merge develop: Fast-forward
+[33m83b9761[m HEAD@{37}: checkout: moving from develop to master
+[33m8a3b7e1[m HEAD@{38}: commit: Extructura responsive y vistas
+[33m83b9761[m HEAD@{39}: clone: from https://github.com/natalieechenique/talent-fest-hackathon.git
