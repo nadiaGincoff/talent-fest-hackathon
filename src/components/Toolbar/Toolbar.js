@@ -21,6 +21,8 @@ const Toolbar = props => (
 <div className='spacer' />
 <div className='toolbar_navigation-items'>
  <ul>
+
+ <li><a href='/Login'>Entrar</a></li>
     <li><a href='/Notifications'>Notificaciones</a></li>
     <li><a href='/Messages'>Mensajes</a></li>
     <li><a href='/User'>Usuario</a></li>
