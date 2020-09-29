@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import './Week.css'
 
 
 export const Week = () => {
@@ -27,18 +27,21 @@ return(
     </div>
     <div className="weekRadiosPersona">
         <input 
+        className="firstRadio"
         type="radio"
         checked = {radioPersona === "1"}
         value="1"
         onChange={(e)=> { setRadioPersona(e.target.value) }}
         />
         <input 
+        className="secondRadio"
         type="radio"
         checked = {radioPersona === "2"}
         value="2"
         onChange={(e)=> { setRadioPersona(e.target.value) }}
         />
         <input 
+        className="thirdRadio"
         type="radio"
         checked = {radioPersona === "3"}
         value="3"
@@ -50,18 +53,21 @@ return(
     </div>
     <div className="weekRadiosTecnologia">
         <input 
+        className="firstRadio"
         type="radio"
         checked = {radioTecnologia === "1"}
         value="1"
         onChange={(e)=> { setRadioTecnologia(e.target.value) }}
         />
         <input 
+        className="secondRadio"
         type="radio"
         checked = {radioTecnologia === "2"}
         value="2"
         onChange={(e)=> { setRadioTecnologia(e.target.value) }}
         />
         <input 
+        className="thirdRadio"
         type="radio"
         checked = {radioTecnologia === "3"}
         value="3"
@@ -73,18 +79,21 @@ return(
     </div>
     <div className="weekRadiosProcesos">
         <input 
+        className="firstRadio"
         type="radio"
         checked = {radioProcesos === "1"}
         value="1"
         onChange={(e)=> { setRadioProcesos(e.target.value) }}
         />
         <input 
+        className="secondRadio"
         type="radio"
         checked = {radioProcesos === "2"}
         value="2"
         onChange={(e)=> { setRadioProcesos(e.target.value) }}
         />
         <input 
+        className="thirdRadio"
         type="radio"
         checked = {radioProcesos === "3"}
         value="3"
