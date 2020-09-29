@@ -31,7 +31,7 @@ const RouterApp = () => {
           <BarsContainer />
             <Switch>
             <Route path="/Login" component={Login} />
-      <LAyout></LAyout>
+                <LAyout></LAyout>
                 <Route path='/Messages' component= {Messages} />
                 <Route path='/Notifications' component= {Notifications} />
                 <Route path="/User" component={User} />

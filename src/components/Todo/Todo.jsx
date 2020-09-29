@@ -2,20 +2,18 @@ import React, { useState } from 'react';
 import {firebase} from '../../firebase';
 import './Todo.css';
 import Plus from '../../Images/plus.png'
-function Todo() {
 
+function Todo() {
     const [tareas, setTareas] = useState([]);
     const [tarea, setTarea]= useState('')
 
-    const [isChecked, setIsChecked] = useState(false);
-
     React.useEffect(() =>{
-        const obtenerDatos = async()=>{
+        const obtenerDatos = async () =>{
             try { //intenta hacer esto
                 const db = firebase.firestore()
                 const data = await db.collection('tareas').get()
                 console.log(data.docs)
-                const arrayData= data.docs.map(doc => ({
+                const arrayData = data.docs.map(doc => ({
                     id: doc.id,
                     ...doc.data()  
                 }))
@@ -27,7 +25,7 @@ function Todo() {
         obtenerDatos()
     }, []) //corchetes para que solo se ejecute una vez
  
-    const agregar = async (e) =>{
+    const agregar = async (e) => {
         e.preventDefault() //previene comportamiento por defecto get
         
         if(!tarea.trim()){
@@ -39,6 +37,7 @@ function Todo() {
             const db = firebase.firestore()
             const nuevaTarea = {
                 name: tarea,
+                completed: false,
                 fecha: Date.now()
             }
             const data = await db.collection('tareas').add(nuevaTarea)
@@ -51,7 +50,6 @@ function Todo() {
             console.log(error)
         }
         console.log(tarea)
-
     }
 
     const eliminar = async (id) =>{
@@ -66,34 +64,29 @@ function Todo() {
         }
     }
 
+    const checked = async (id) => {
+        try {
+            const db = firebase.firestore()
+            await db.collection("tareas").doc(id).update({
+                completed: true
+            })
+
+            //1 obtener algun tpo de referencia al objeto que se quiere editar/actualizar
+
+            //2 actualizar objeto
+
+
+            // esto no deberia ser necesario en un approach mas react
+            //3 recargar tareas
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
         <div>
             <div className="container">
-                <h1>PRUEBA: Esta marcado: {isChecked ? "True" : "False"}</h1>
-                <div className="row">
-                    <ul className="list">
-                        {
-                            tareas.map(item => (
-                                <li className="listItem" key={item.id}>
-                                    {item.name}
-                                    <input 
-                                    type="checkbox"
-                                    checked={isChecked}
-                                    onChange={(e)=>{setIsChecked(e.target.checked)}}
-                                    />
-                                    <button 
-                                    className="btnEliminarTarea"
-                                    onClick={() => eliminar(item.id)}
-                                    >
-                                        Eliminar
-
-                                    </button>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
-                
                 <div className="formTareas">
                     <form onSubmit={agregar} className='form-container'>
                         <input 
@@ -110,7 +103,48 @@ function Todo() {
                         </button>
                     </form>
                 </div>
-                    <div className="row">
+         
+                <div className="row">
+                    <ul className="list">
+                        
+                        {   
+                            tareas.filter(item => item.completed === false).map(filteredItem => (
+                                <li className="listItem" key={filteredItem.id}>
+                                    <label class="containerListItem">{filteredItem.name}
+                                        <input type="checkbox" checked={filteredItem.completed} onChange={() => checked(filteredItem.id)} />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <button 
+                                        className="btnEliminarTarea"
+                                        onClick={() => eliminar(filteredItem.id)}
+                                    >
+                                        Eliminar
+                                    </button>
+                                </li>  
+                            ))
+                        }
+                        {
+                            tareas.filter(item => item.completed === true).map(filteredItem => (
+                                <li className="listItem" key={filteredItem.id}>
+                                    <label class="containerListItem">{filteredItem.name}
+                                        <input type="checkbox" checked={filteredItem.completed} />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <button 
+                                        className="btnEliminarTarea"
+                                        onClick={() => eliminar(filteredItem.id)}
+                                    >
+                                        Eliminar
+                                    </button>
+                                </li>
+                            ))
+                        }
+                        
+                    </ul>
+                </div>
+                
+               
+                    {/* <div className="row">
                         <ul className="list">
                             {
                                 tareas.map(item => (
@@ -128,11 +162,10 @@ function Todo() {
                                 ))
                             }
                         </ul>
-                </div>     
+                </div>      */}
             </div>
         </div>
     )
 }
 
 export default Todo
-
