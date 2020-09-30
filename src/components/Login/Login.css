@@ -1,14 +1,30 @@
-
-.containerLogin {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.login { 
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1000000;
+        background: #2C2C3C;
 }
 
+.containerLeft { 
+    color:white;
+    align-self:center;
+    }
+
+.containerLogin {
+     height: 100%;
+    justify-items: center;
+    text-align: center;
+    align-self: center;
+    box-shadow: inset 0px 0px 0px 14px rgba(247,225,4,1);
+    }
+    
 .containerInputs {
-    height: 100vh;
-    width: 50%;
-    border: 2vh solid yellow;
+    margin-top:14%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,8 +43,9 @@
 }
 
 .containerInputs input {
-    width: 465px;
-    height: 69px;
+    padding-left:20px;
+    width: 60%;
+    height: 60px;
     border-radius: 20px;
 }
 
@@ -37,4 +54,101 @@
     font-weight: 300;
     font-style: normal;
     color: #BDBDBD;
+} 
+
+.logoleft { 
+display:flex;
+flex-direction:column;
+color:white;
+text-align:center;
+align-self:center;
+}
+
+.logologin { 
+display:none;
+}
+
+.logintittle {
+color:white;
+text-align:center;
+align-self:flex-start;
+padding-top:4%;
+}
+
+.input {
+    padding:0px;
+}
+
+
+
+/* MOBILE */
+@media (max-width:900px) {
+.main-container h1 {
+    display: grid;
+    width: 100%;
+    text-align: center;
+    margin-top: 15%;
+    font-size: 1rem;
+}
+
+.content {
+    width: 100%;
+    background-size: cover;
+    text-align: center;
+    margin-top: 3.4%;
+    margin-left: 0;
+}
+
+.login { 
+    display:grid;
+    grid-template-columns:1fr;
+}
+
+.containerLogin {
+    padding:0px;
+width:100%;
+text-align:center;
+box-shadow: inset 0px 0px 0px 14px rgba(247,225,4,1);
+}
+
+.containerInputs {
+ margin-top:0px;
+height: 70%;
+width:100%;
+}
+
+.containerInputs input {
+    width: 70%;
+    height: 8%;
+}
+
+.containerLeft { 
+display:none;
+}
+
+.logoleft { 
+display:none;
+}
+
+.logologin { 
+width:100%;
+display:flex;
+flex-direction:row;
+color:white;
+text-align:center;
+}
+
+.logintittle {
+width:100%;
+color:white;
+text-align:center;
+align-self:flex-start;
+padding-top:4%;
+}
+
+.input {
+    font-size:14px;
+    padding:20px;
+}
+
 }

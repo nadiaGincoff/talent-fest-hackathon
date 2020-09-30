@@ -47,14 +47,14 @@
 
 
 
-import React from 'react';
-import BarsContainer from '../components/BarsContainer';
-// import { Container } from 'react-bootstrap';
+// import React from 'react';
+// import BarsContainer from '../components/BarsContainer';
+// // import { Container } from 'react-bootstrap';
 
-export const Layout = (props) => (
-<BarsContainer>   
-{props.children}
-</BarsContainer> 
-);
+// export const Layout = (props) => (
+// <BarsContainer>   
+// {props.children}
+// </BarsContainer> 
+// );
 
-export default Layout;
+// export default Layout;
