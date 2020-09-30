@@ -23,6 +23,33 @@
 
 // const RouterApp = () => {
  
+<<<<<<< HEAD
+    return (
+      <React.Fragment>
+        {/* <Favicon url="favicon.ico"/> */}
+    {/* <MainContainer /> */}
+          <Router>
+          <BarsContainer />
+            <Switch>
+            <Route path="/Login" component={Login} />
+                <LAyout></LAyout>
+                <Route path='/Messages' component= {Messages} />
+                <Route path='/Notifications' component= {Notifications} />
+                <Route path="/User" component={User} />
+                <Route path="/Exit" component={Exit} />
+
+                <Route exact path='/' component={Activities} />
+                <Route path='/Important' component={Important} />
+                <Route path='/Assigned' component={Assigned} />
+                <Route path='/Scheduled' component={Scheduled} />
+                <Route path='/Week' component={Week} />
+                <Route path='/Ranking' component={Ranking} />
+                <Route path='/Resting' component={Resting} />
+                <Route component={Error} />
+
+            </Switch>
+          </Router>
+=======
 //     return (
 //       <React.Fragment>
 //         {/* <Favicon url="favicon.ico"/> */}
@@ -48,6 +75,7 @@
 
 //             </Switch>
 //           </Router>
+>>>>>>> f40bcd88a46689662534e58935102021816e0ba0
        
 //       </React.Fragment>
 //     );
