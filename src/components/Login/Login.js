@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { UserDataContext } from '../../context/UserDataContext'
 import './Login.css';
+import Ey from '../../Images/Ey.jpg'
+import userimg from '../../Images/userimg.png'
 
 const Login = () => {
 
@@ -34,20 +36,33 @@ const Login = () => {
 
 
         <section className='containerLogin'>
-        <span className='logologin'><h1>EY</h1></span>
+    
+
+        <span className='logologin'>
+            <img src={Ey} alt="EY" width="100px"/> 
+            </span>
+
+
+
 
             <div className='containerInputs'>
                 <h1>BIENVENIDO!</h1>
-                <input 
-                    className='input'
-                    type='text'
-                    autoFocus
-                    required
-                    placeholder='Javier Madrid'
-                    value={email} 
-                    onChange={ (e) => setEmail(e.target.value) }
-                />
-                <p>{emailError}</p>
+
+
+            <span className='inputimg'> 
+            <img src={userimg} alt='hola' width="30px"/>
+                 <input className='input' type='text' autoFocus required
+                 placeholder='Javier Madrid'
+                value={email} 
+                onChange={ (e) => setEmail(e.target.value) } />
+                 <p>{emailError}</p>
+  
+{/* 
+   <img src={user} alt="User" width="100px"/>  */}
+</span>
+
+<span className='inputimg'> 
+            <img src={userimg} alt='hola' width="30px"/>
                 <input 
                  className='input'
                     type='text'
@@ -56,8 +71,13 @@ const Login = () => {
                     placeholder='javier.madrid@ey.com'
                     value={email} 
                     onChange={ (e) => setEmail(e.target.value) }
+                    src={user} alt="User" width="100px"
                 />
-                <p>{emailError}</p>        
+                <p>{emailError}</p> 
+                </span>
+                
+                  <span className='inputimg'> 
+            <img src={userimg} alt='hola' width="30px"/>       
                 <input 
                  className='input'
                     type='password'
@@ -66,7 +86,8 @@ const Login = () => {
                     value={password}
                     placeholder='********'
                     onChange={ (e) => setPassword(e.target.value) }
-                />
+                /></span>
+
                 <p>{passwordError}</p>
                 <div>
                     {hasAccount ? (
