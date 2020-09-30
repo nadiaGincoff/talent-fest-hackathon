@@ -11,6 +11,7 @@
 }
 
 .containerLeft { 
+    text-align:center;
     color:white;
     align-self:center;
     }
@@ -24,7 +25,7 @@
     }
     
 .containerInputs {
-    margin-top:14%;
+    margin-top:15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,17 +57,35 @@
     color: #BDBDBD;
 } 
 
+
+.loginlogos {
+    display:grid;
+    grid-template-rows:1fr 1fr;
+}
 .logoleft { 
-display:flex;
-flex-direction:column;
+    grid-template-rows:1fr 1fr;
 color:white;
 text-align:center;
-align-self:center;
+align-self:flex-start;
+margin-bottom:100px;
 }
+
+.logowupleft { 
+    grid-template-rows:1fr 1fr;
+    display:flex;
+    flex-direction:column;
+    color:white;
+    text-align:center;
+    align-self:center;
+    }
 
 .logologin { 
 display:none;
 }
+
+.logowuplogin{ 
+    display:none;
+    }
 
 .logintittle {
 color:white;
@@ -78,6 +97,22 @@ padding-top:4%;
 .input {
     padding:0px;
 }
+
+.inputimg {
+    position: relative;
+    width:80%;
+
+}
+
+.inputimg img {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    padding: 9px 8px;
+    color: #aaa;
+    transition: 0.3s;
+}
+
 
 
 
@@ -100,12 +135,11 @@ padding-top:4%;
 }
 
 .login { 
-    display:grid;
     grid-template-columns:1fr;
 }
 
 .containerLogin {
-    padding:0px;
+ padding:0px;
 width:100%;
 text-align:center;
 box-shadow: inset 0px 0px 0px 14px rgba(247,225,4,1);
@@ -118,8 +152,9 @@ width:100%;
 }
 
 .containerInputs input {
-    width: 70%;
-    height: 8%;
+    text-align:left;
+    width: 80%;
+    height: 2%;
 }
 
 .containerLeft { 
@@ -130,25 +165,48 @@ display:none;
 display:none;
 }
 
-.logologin { 
-width:100%;
+.logowupleft {
 display:flex;
-flex-direction:row;
+ }
+
+.logologin { 
+margin-top:40px;
+display:flex;
+justify-content: center;
 color:white;
 text-align:center;
 }
 
-.logintittle {
+.logologin, img {
+    padding-left: 40%; 
+    text-align:center;
+    width:50px;
+}
+
+.logowuplogin {
+   display:flex; 
+   /* width:100px; */
+}
+
+.welcome {
 width:100%;
 color:white;
 text-align:center;
 align-self:flex-start;
-padding-top:4%;
+padding-bottom:5%;
 }
 
 .input {
-    font-size:14px;
+    font-size:6px;
     padding:20px;
+}
+
+.inputimg img {
+    margin-left:2px;
+    width:22px;
+    position: absolute;
+    top: 8px;
+    padding: 9px 8px;
 }
 
 }
