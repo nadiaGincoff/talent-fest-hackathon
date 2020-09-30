@@ -16,7 +16,7 @@ import { Week } from '../components/views/Week';
 import { Ranking } from '../components/views/Ranking';
 import { Resting } from '../components/views/Resting';
 import { Error } from '../components/views/Error';
-import { Login } from '../components/views/Login';
+import { Loginview } from '../components/views/Loginview';
 
 
 
@@ -24,7 +24,7 @@ const Routes = () => {
       return (
             <Switch>
                   <Layout exact path='/' component={Activities} />
-                  <LayoutLogin exact path='/Login' component={Login} />
+                  <LayoutLogin exact path='/Login' component={Loginview} />
                   <Layout exact path='/Activities' component={Activities} />
                   <Layout exact path='/Messages' component={Messages} />
                   <Layout exact path='/Notifications' component={Notifications} />

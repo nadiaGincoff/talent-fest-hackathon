@@ -23,7 +23,7 @@ function Todo() {
             }
         }
         obtenerDatos()
-    }, []) //corchetes para que solo se ejecute una vez
+    }) 
  
     const agregar = async (e) => {
         e.preventDefault() //previene comportamiento por defecto get
@@ -70,15 +70,6 @@ function Todo() {
             await db.collection("tareas").doc(id).update({
                 completed: true
             })
-
-            //1 obtener algun tpo de referencia al objeto que se quiere editar/actualizar
-
-            //2 actualizar objeto
-
-
-            // esto no deberia ser necesario en un approach mas react
-            //3 recargar tareas
-
         } catch (error) {
             console.log(error)
         }
