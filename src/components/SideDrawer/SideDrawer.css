@@ -1,8 +1,9 @@
-.icon {
+.iconSideDrawer {
     max-width: 30px;
     max-height: 30px;
     margin-right: 3em;
 }
+
 .side-drawer {
     height: 100%;
     background: #2C2C3C;
@@ -38,11 +39,9 @@
     /* display: grid;
     grid-template-columns: 1fr;
     justify-content: center; */
-    margin-inline-start: -39px;
 }
 
 .side-drawer li {
-
     list-style: none;
     padding: 15px;
     text-align: center;
@@ -50,9 +49,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    height: 69px;
+
 }
 
-.side-drawer li:hover {
+.side-drawer-li:hover {
     background-color: rgba(196, 196, 196, 0.35);
     border-inline-start: 15px solid #F5E433;
 }

@@ -2,6 +2,22 @@ import React, { useState } from 'react';
 import {firebase} from '../../firebase';
 import './Todo.css';
 import Plus from '../../Images/plus.png'
+import 'bulma/css/bulma.css'
+import Alert from '../../Images/task-icons/alert.png'
+import Calendar from '../../Images/task-icons/calendar.png'
+import Return from '../../Images/task-icons/return.png'
+import Star from '../../Images/task-icons/star.png'
+
+const TaskIcons = () => {
+    return (
+        <div class='containerIcons'>
+            <img src={Calendar} alt="" className="taskIcon"/>
+            <img src={Alert} alt="" className="taskIcon"/>
+            <img src={Return} alt="" className="taskIcon"/>
+            <img src={Star} alt="" className="taskIcon"/>
+        </div>
+    )
+}
 
 function Todo() {
     const [tareas, setTareas] = useState([]);
@@ -77,7 +93,11 @@ function Todo() {
 
     return (
         <div>
-            <div className="container">
+            <div className="containerActivities">
+                {/* <div className='containerHeaderActivities'>
+                    <h1>Completitud de tareas</h1>
+                    <progress class="progress is-grey-darker is-large" value="60" max="100" style={{border: '2px solid #F5E433', backgroundColor: 'white', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}/>
+                </div> */}
                 <div className="formTareas">
                     <form onSubmit={agregar} className='form-container'>
                         <input 
@@ -105,55 +125,39 @@ function Todo() {
                                         <input type="checkbox" checked={filteredItem.completed} onChange={() => checked(filteredItem.id)} />
                                         <span class="checkmark"></span>
                                     </label>
-                                    <button 
+                                    {/* <button 
                                         className="btnEliminarTarea"
                                         onClick={() => eliminar(filteredItem.id)}
                                     >
                                         Eliminar
-                                    </button>
+                                    </button> */}
+                                    <TaskIcons />
                                 </li>  
                             ))
                         }
+                        { tareas.filter(item => item.completed === true).length > 0 ? <div className='buttonCompleted'>Completado</div> : null}
                         {
                             tareas.filter(item => item.completed === true).map(filteredItem => (
                                 <li className="listItem" key={filteredItem.id}>
-                                    <label class="containerListItem">{filteredItem.name}
-                                        <input type="checkbox" checked={filteredItem.completed} />
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <button 
-                                        className="btnEliminarTarea"
-                                        onClick={() => eliminar(filteredItem.id)}
-                                    >
-                                        Eliminar
-                                    </button>
+                                    <div>
+                                        <label class="containerListItem">{filteredItem.name}
+                                            <input type="checkbox" checked={filteredItem.completed} />
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        {/* <button 
+                                            className="btnEliminarTarea"
+                                            onClick={() => eliminar(filteredItem.id)}
+                                        >
+                                            Eliminar
+                                        </button> */}
+                                    </div>
+                                    <TaskIcons />
                                 </li>
                             ))
                         }
                         
                     </ul>
                 </div>
-                
-               
-                    {/* <div className="row">
-                        <ul className="list">
-                            {
-                                tareas.map(item => (
-                                    <li className="listItem" key={item.id}>
-                                        {item.name}
-                                        <button 
-
-                                        className="btnEliminarTarea"
-                                        onClick={() => eliminar(item.id)}
-                                        >
-                                            Eliminar
-
-                                        </button>
-                                    </li>
-                                ))
-                            }
-                        </ul>
-                </div>      */}
             </div>
         </div>
     )
