@@ -1,15 +1,81 @@
 .weekText{
-    background: green;
+    padding:50px;
+    margin-bottom:20px;
 }
-/*.firstRadio [type="radio"]{
+/* /*.firstRadio [type="radio"]{
     -webkit-appearance: none;
+} */
+
+.weekRadiosPersona {
+    padding:20px;
+    text-align:center;
+    width:100%;
+  padding-bottom:20px;
+  margin-bottom:50px;
 }
 
-*/.firstRadio [type="radio"]:checked {
-    background: blue;
-    color: gray;
+.weekRadiosTecnologia {
+padding:20px;
+text-align:center;
+margin-bottom:0px;
+}
+
+.weekRadiosProcesos {
+    text-align:center;
+}
+
+.firstRadio:checked {
+    background-color: rgb(53, 223, 76);
+    color: rgb(53, 223, 76);
     box-shadow: 0 15px 45px rgba(24,249,141,0.2);
 }
+
 .firstRadio{
-    background: blue;
+    background-color: rgb(53, 223, 76);
+   color: rgb(53, 223, 76);
+   padding:20px;
 }
+
+.secondRadio{
+    background-color: rgb(53, 223, 76);
+   color: rgb(53, 223, 76);
+   padding:20px;
+}
+
+.thirdRadio{
+    background-color: rgb(53, 223, 76);
+   color: rgb(53, 223, 76);
+   padding:10px;
+}
+
+.happy {
+    background-color:transparent;
+}
+
+.medium {
+    background-color:transparent;
+}
+
+.sad {
+    background-color:transparent;
+}
+
+.btncontainer {
+    margin-top:20px;
+    padding:20px;
+}
+
+.sendBtn {
+    background-color:rgb(180, 188, 173);
+    text-align:center;
+    padding:10px;
+    width:20%;
+    border-radius: 10px;;
+  }
+  
+  .sendBtn:hover{background-color:rgb(103, 196, 108);}
+  
+ .sendBtn:focus{background-color:rgb(158, 230, 127);}
+  
+
+

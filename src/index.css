@@ -8,13 +8,20 @@ body {
    height:100%;
 }
 
-._footer {
+.footer {
   color:rgb(185, 181, 181);
-  width:100%;
+  width:180%;
   text-align:center;
   position:fixed;
   bottom:0;
   padding:10px;
-  text-align:Center;
+  text-align:right;
   align-content:center;
+}
+
+
+@media (max-width:768px) {
+.footer {
+  width:100%;
+}
 }
