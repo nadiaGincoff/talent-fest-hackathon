@@ -1,9 +1,9 @@
 import React, { createContext, useState, useEffect } from 'react';
-import fire from '../fire';
+import fire from '../firebase';
 
 export const UserDataContext = createContext();
 
-const ProviderFirebase = (props) => {
+const Providerfirebase = (props) => {
     const [ user, setUser ] = useState('');
     const [ email, setEmail ] = useState('');
     const [ password, setPassword ] = useState('');
@@ -63,14 +63,15 @@ const ProviderFirebase = (props) => {
     }
   
     const authListener = () => {
-      fire.auth().onAuthStateChanged(user => {
-        if (user) {
-          clearInputs();
-          setUser(user);
-        } else {
-          setUser('');
-        }
-      })
+      console.log(fire)
+      // fire.auth().onAuthStateChanged(user => {
+      //   if (user) {
+      //     clearInputs();
+      //     setUser(user);
+      //   } else {
+      //     setUser('');
+      //   }
+      // })
     }
   
     useEffect(() => {
@@ -100,4 +101,4 @@ const ProviderFirebase = (props) => {
     )
 }
  
-export default ProviderFirebase;
+export default Providerfirebase;

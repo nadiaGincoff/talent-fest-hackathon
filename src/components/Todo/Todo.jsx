@@ -31,7 +31,7 @@ function Todo() {
             try { //intenta hacer esto
                 const db = firebase.firestore()
                 const data = await db.collection('tareas').get()
-                console.log(data.docs)
+                // console.log(data.docs)
                 const arrayData = data.docs.map(doc => ({
                     id: doc.id,
                     ...doc.data()  
@@ -42,7 +42,7 @@ function Todo() {
             }
         }
         obtenerDatos()
-    }, ) 
+    }) 
  
     const agregar = async (e) => {
         e.preventDefault() //previene comportamiento por defecto get
