@@ -12,11 +12,19 @@
 }
 
 .containerHeaderActivities {
+  margin-left: 25%;
+margin-top: 15%;
+}
+
+/* 
+.containerHeaderActivities {
   margin-top: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+  margin-left: 25%;
+margin-top: 15%;
+} */
 
 .containerHeaderActivities h1 {
   width: 50%;
@@ -79,6 +87,7 @@
 
 .taskIcon {
   width: 40px;
+  cursor: pointer;
 }
 
 .row {

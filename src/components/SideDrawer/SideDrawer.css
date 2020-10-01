@@ -73,7 +73,9 @@
 .side-drawer a:active {
     color: rgba(216, 160, 99, 0.939);
 }
-
+.Resting {
+    margin-top: 24em;
+}
 
 @media (min-width: 769px) {
     .side-drawer {

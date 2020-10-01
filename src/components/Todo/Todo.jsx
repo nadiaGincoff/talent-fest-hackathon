@@ -7,14 +7,17 @@ import Alert from '../../Images/task-icons/alert.png'
 import Calendar from '../../Images/task-icons/calendar.png'
 import Return from '../../Images/task-icons/return.png'
 import Star from '../../Images/task-icons/star.png'
+import Delete from '../../Images/task-icons/delete.png'
+import Zoom from 'react-reveal/Zoom';
 
-const TaskIcons = () => {
+const TaskIcons = (props) => {
     return (
         <div class='containerIcons'>
             <img src={Calendar} alt="" className="taskIcon"/>
             <img src={Alert} alt="" className="taskIcon"/>
             <img src={Return} alt="" className="taskIcon"/>
             <img src={Star} alt="" className="taskIcon"/>
+            <img src={Delete} alt="" className="taskIcon" onClick={props.click}/>
         </div>
     )
 }
@@ -39,7 +42,7 @@ function Todo() {
             }
         }
         obtenerDatos()
-    }) 
+    }, ) 
  
     const agregar = async (e) => {
         e.preventDefault() //previene comportamiento por defecto get
@@ -62,6 +65,7 @@ function Todo() {
                 {...nuevaTarea, id: data.id}
             ])
             setTarea('')
+
         } catch (error) {
             console.log(error)
         }
@@ -92,12 +96,15 @@ function Todo() {
     }
 
     return (
-        <div>
-            <div className="containerActivities">
-                {/* <div className='containerHeaderActivities'>
-                    <h1>Completitud de tareas</h1>
-                    <progress class="progress is-grey-darker is-large" value="60" max="100" style={{border: '2px solid #F5E433', backgroundColor: 'white', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}/>
-                </div> */}
+        <div className='containerActivities'>
+            <div className="">
+            {/* { tareas.filter(item => item.completed === true).length > 0 ? 
+                        <div className='containerHeaderActivities'>
+                            <h1>Completitud de tareas</h1>
+                            <progress class="progress is-grey-darker is-large" value="60" max="100" style={{border: '2px solid #F5E433', backgroundColor: 'white', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}/>
+                        </div>
+                    : null
+            } */}
                 <div className="formTareas">
                     <form onSubmit={agregar} className='form-container'>
                         <input 
@@ -116,10 +123,12 @@ function Todo() {
                 </div>
          
                 <div className="row">
+                    
                     <ul className="list">
-                        
+                    
                         {   
                             tareas.filter(item => item.completed === false).map(filteredItem => (
+                                <Zoom left>
                                 <li className="listItem" key={filteredItem.id}>
                                     <label class="containerListItem">{filteredItem.name}
                                         <input type="checkbox" checked={filteredItem.completed} onChange={() => checked(filteredItem.id)} />
@@ -130,14 +139,17 @@ function Todo() {
                                         onClick={() => eliminar(filteredItem.id)}
                                     >
                                         Eliminar
-                                    </button> */}
-                                    <TaskIcons />
+                                    </button>
+                                */}
+                                    <TaskIcons click={() => eliminar(filteredItem.id)}/>
                                 </li>  
+                               </Zoom>
                             ))
                         }
                         { tareas.filter(item => item.completed === true).length > 0 ? <div className='buttonCompleted'>Completado</div> : null}
                         {
                             tareas.filter(item => item.completed === true).map(filteredItem => (
+                                <Zoom left>
                                 <li className="listItem" key={filteredItem.id}>
                                     <div>
                                         <label class="containerListItem">{filteredItem.name}
@@ -151,12 +163,16 @@ function Todo() {
                                             Eliminar
                                         </button> */}
                                     </div>
-                                    <TaskIcons />
+                                    <TaskIcons click={() => eliminar(filteredItem.id)} />
+                                    
                                 </li>
+                               </Zoom>
+                                   
                             ))
                         }
                         
                     </ul>
+                    
                 </div>
             </div>
         </div>
