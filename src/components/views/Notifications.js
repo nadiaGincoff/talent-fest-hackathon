@@ -1,10 +1,10 @@
-import React from 'react';
-import './Views.css';
-
+import React from "react";
+import "./Views.css";
+import Construction from "../Construction";
 export const Notifications = () => (
-<div className='main-container'>
-<div className='content'>
-    <h1>Notificaciones</h1>
-</div>
-</div>
+  <div className="main-container">
+    <div className="content">
+      <Construction></Construction>
+    </div>
+  </div>
 );

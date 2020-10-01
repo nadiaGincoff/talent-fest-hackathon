@@ -35,18 +35,18 @@ export const SideDrawer = (props) => {
             <a href="/Assigned">Asignadas</a>
           </li>
           <li className='side-drawer-li'>
-            <img src={Week} alt="side drawer img" className="icon" />
+            <img src={Week} alt="side drawer img" className="iconSideDrawer" />
             <a href="/Week">Mi semana</a>
           </li>
           <li className='side-drawer-li'>
-            <img src={Ranking} alt="side drawer img" className="icon" />
+            <img src={Ranking} alt="side drawer img" className="iconSideDrawer" />
             <a href="/Ranking">Ranking</a>
           </li>
         </ul>
         <ul className="Resting">
           <li className='side-drawer-li'>
-            <img src={Break} alt="side drawer img" className="icon" />
-            <a href="/Resting">Descansando</a>
+            <img src={Break} alt="side drawer img" className="iconSideDrawer" />
+            <a href="/Resting">Break</a>
           </li>
         </ul>
       </nav>
