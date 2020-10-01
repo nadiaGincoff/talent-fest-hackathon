@@ -8,7 +8,7 @@ body {
    height:100%;
 }
 
-.footer {
+._footer {
   color:rgb(185, 181, 181);
   width:100%;
   text-align:center;
@@ -17,5 +17,4 @@ body {
   padding:10px;
   text-align:Center;
   align-content:center;
-
 }

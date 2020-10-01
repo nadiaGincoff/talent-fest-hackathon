@@ -2,6 +2,9 @@ import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 import "./Toolbar.css";
 import React from "react";
 import logoEy from "../../Images/Ey.jpg";
+import Alert from '../../Images/header-icons/Group 140.png'
+import Batman from '../../Images/header-icons/Group 99.png'
+import Notifications from '../../Images/header-icons/Group.png'
 
 const Toolbar = (props) => {
   return (
@@ -12,23 +15,23 @@ const Toolbar = (props) => {
         </div>
         <div className="toolbar__logo">
           <a href="/">
-            <img src={logoEy} className="logo" alt="logo-ey" />
+            <img src={logoEy} className="logoEy" alt="logo-ey" />
           </a>
         </div>
         <div className="spacer" />
         <div className="toolbar_navigation-items">
           <ul>
             <li>
-              <a href="/Notifications">Notificaciones</a>
+              <img src={Notifications} alt="side drawer img" className="iconSideDrawer" />
             </li>
             <li>
-              <a href="/Messages">Mensajes</a>
+              <img src={Alert} alt="side drawer img" className="iconSideDrawer" />
             </li>
             <li>
-              <a href="/User">Usuario</a>
+              <img src={Batman} alt="side drawer img" className="iconSideDrawer" />
             </li>
             <li>
-              <a href="/Login">Salir</a>
+              <a href="/Login">Cerrar sesión</a>
             </li>
           </ul>
         </div>
