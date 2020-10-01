@@ -43,7 +43,7 @@ export const SideDrawer = (props) => {
             <a href="/Ranking">Ranking</a>
           </li>
         </ul>
-        <ul className="Resting">
+        <ul className="break">
           <li className='side-drawer-li'>
             <img src={Break} alt="side drawer img" className="iconSideDrawer" />
             <a href="/Resting">Break</a>
