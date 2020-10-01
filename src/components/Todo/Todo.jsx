@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {firebase} from '../../firebase';
 import './Todo.css';
 import Plus from '../../Images/plus.png'
+import 'bulma/css/bulma.css'
 import Alert from '../../Images/task-icons/alert.png'
 import Calendar from '../../Images/task-icons/calendar.png'
 import Return from '../../Images/task-icons/return.png'
