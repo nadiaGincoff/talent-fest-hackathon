@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
+import Construction from "../Construction";
 
 export const Assigned = () => (
-<div className='main-container'>
-<div className='content'>
-    <h1>Asignadas</h1>
-</div>
-</div>
+  <div className="main-container">
+    <div className="content">
+      <Construction></Construction>
+    </div>
+  </div>
 );

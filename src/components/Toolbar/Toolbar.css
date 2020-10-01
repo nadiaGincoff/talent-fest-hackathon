@@ -1,7 +1,10 @@
-.logo {
-    width: 60px;
-    height: 72px;
+.logoEy {
+    margin-bottom:5px;
+    width: 66px;
+    height: 81px;
+    margin-inline-start: 5em;
 }
+
 .toolbar {
     position:fixed;
     top:0;
@@ -9,7 +12,8 @@
     width:100%;
     background-color:FFFFFF;
     height: 100px;
-    box-shadow: inset 0 -10px 0 #2C2C3C;
+    
+    z-index: 1;
 }
 
 .toolbar__navigation {
@@ -17,6 +21,8 @@
     height:100%;
     align-items:center; 
     padding:0 1rem;
+    box-shadow: inset 0 -10px 0 #2C2C3C;
+    background-color: #ffffff;
 }
 
 .toolbar__logo {
@@ -38,6 +44,8 @@ list-style:none;
 margin:0;
 padding:0;
 display:flex;
+margin-inline-end: 5em;
+cursor: pointer;
 }
 
 .toolbar_navigation-items li {
@@ -48,6 +56,9 @@ display:flex;
     color:rgb(33, 31, 31);
     text-decoration:none;
     padding:7px;
+    font-size: 25px;
+line-height: 29px;
+text-align: right;
 }
 
 .toolbar_navigation-items a:hover,
