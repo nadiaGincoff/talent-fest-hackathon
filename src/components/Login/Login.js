@@ -62,7 +62,7 @@ const Login = () => {
                 </span>
 
             <span className='inputimg'> 
-            <img src={hombre} alt='User' width="32px"/>
+            <img src={hombre} alt='User' width="38px"/>
                  <input className='input' type='text' autoFocus required
                  placeholder='Javier Madrid'
                 value={email} 
@@ -71,7 +71,7 @@ const Login = () => {
 </span>
 
 <span className='inputimg'> 
-            <img src={correo} alt='Correo' width="30px"/>
+            <img src={correo} alt='Correo' width="38px"/>
                 <input 
                  className='input'
                     type='text'
@@ -85,7 +85,7 @@ const Login = () => {
                 </span>
                 
                   <span className='inputimg'> 
-            <img src={seguridad} alt='Seguridad' width="20px"/>       
+            <img src={seguridad} alt='Seguridad' width="35px"/>       
                 <input 
                  className='input'
                     type='password'
